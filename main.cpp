@@ -61,7 +61,8 @@ int main()
             field[10][15] = '0';
             cout << "You have opted to use the glider gun!" << endl;
             break;
-        case 2: cout << "You have opted for manual data entry! This field measures 50 cells by 50 cells. Enter 51 for the row and 51 for the column to cease entry." << endl;
+        case 2:
+            cout << "You have opted for manual data entry! This field measures 50 cells by 50 cells. Enter 51 for the row and 51 for the column to cease entry." << endl;
             while (row != 52 && col != 52)
             {
                 cout << "Row to activate?: ";
@@ -96,7 +97,11 @@ int main()
             cout << "Enter the number '1' to continue or anything else to stop." << endl;
             cin >> response;
         }
-        else cout << "Invalid entry. Exiting program." << endl;
+        {
+        else
+            cout << "Invalid entry. Enter 1 to resume." << endl;
+            cin >> response;
+        }
     }
     
     cout << "Simulation complete. Thank you for playing Conway's Game of Life!" << endl;
